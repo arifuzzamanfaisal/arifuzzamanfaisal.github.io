@@ -1,16 +1,16 @@
-title:              Clean Blog
-email:              your-email@example.com
-description:        A Blog Theme by Start Bootstrap
-author:             Start Bootstrap
+title:              Md Arifuzzaman Faisal 
+email:              faisal.buet.eee@gmail.com
+description:        Faisal's Blog | Data Science - Nano Physics - Electromagnetics 
+author:             Md Arifuzzaman Faisal 
 baseurl:            ""
 url:                "https://arifuzzamanfaisal.github.io"
 
 # Social Profiles
-twitter_username:   SBootstrap
-github_username:    StartBootstrap
-facebook_username:  StartBootstrap
-instagram_username:  
-linkedin_username:
+twitter_username:   arifuzzamanfaisal
+github_username:    arifuzzamanfaisal
+facebook_username:  arifuzzamanfaisal
+instagram_username:  arifuzzamanfaisal
+linkedin_username: arifuzzamanfaisal
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
