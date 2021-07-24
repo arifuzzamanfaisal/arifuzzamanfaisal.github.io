@@ -40,6 +40,7 @@ layout: default
             {% else %}
             <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
             {% endif %}
+            <img class="img-fluid" src="{{ post.background }}" >
           </a>
           <p class="post-meta">Posted by
             {% if post.author %}
