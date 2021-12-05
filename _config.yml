@@ -2,7 +2,7 @@ title:              Md Arifuzzaman Faisal
 logo:               Arifuzzaman Faisal
 site_title:         Welcome ! 
 email:              faisal.buet.eee@gmail.com
-description:        NanoPhysics - Data Science - Artificial Intelligence 
+description:        NanoElectronics - Data Science - Artificial Intelligence 
 author:             Md Arifuzzaman Faisal 
 baseurl:            ""
 url:                "https://arifuzzamanfaisal.github.io"
@@ -15,7 +15,7 @@ instagram_username:
 linkedin_username: arifuzzamanfaisal
 
 # Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+google_analytics:   G-2X97T3PWEX #UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
 markdown:           kramdown
