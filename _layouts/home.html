@@ -208,12 +208,12 @@ layout: default
 </div>
 </div>
 </div>
-<div class="col-md-4">
+
 {{ content }}
 
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}
-
+	<div class="col-md-4">
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h2 class="post-title">{{ post.title }}</h2>
@@ -236,9 +236,9 @@ layout: default
         </article>
 
         <hr>
-
+		</div>
         {% endfor %}
-</div>
+
 
 </div>
 </div>
