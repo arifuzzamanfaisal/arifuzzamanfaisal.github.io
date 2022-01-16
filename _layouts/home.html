@@ -34,8 +34,14 @@ layout: default
     font-size: 16px;
 	line-height: 1.5;
 }
-.catagory.technology p {
+.catagory.electronics p {
     background-color: #8dc63f;
+}
+.catagory.plasma p {
+    background-color: #1cbbb4;
+}
+.catagory.programming p {
+    background-color: #f26522;
 }
 .catagory p {
     color: #fff;
@@ -131,7 +137,7 @@ layout: default
 <div class="entry-thumbnail">
 <img class="img-fluid" src="{{ post.pic }}" alt="Image">
 </div>
-<div class="catagory technology"><span><p>{{ post.catagory }}</p></span></div>
+<div class="catagory {{ post.catagory }}"><span><p>{{ post.catagory }}</p></span></div>
 </div>
 <div class="post-content">
 <div class="entry-meta">
