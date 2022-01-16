@@ -147,8 +147,8 @@ layout: default
             {% else %}
             {{ site.author }}
             {% endif %} </a></li>
-<li class="views"><i class="fa fa-eye"></i><a href="#">{% include read_time.html content=post.content %}  </a></li>
-<li class="loves"><i class="fa fa-heart-o"></i><a href="#">{{ post.date | date: '%B %d, %Y' }}</a></li>
+<li class="views"><i class="fa fa-eye"></i><a>{% include read_time.html content=post.content %}  </a></li>
+<li class="loves"><i class="fa fa-heart-o"></i><a>{{ post.date | date: '%B %d, %Y' }}</a></li>
 </ul>
 </div>
 <h2 class="entry-title">
