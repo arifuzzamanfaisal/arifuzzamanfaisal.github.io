@@ -209,70 +209,35 @@ layout: default
 </div>
 </div>
 <div class="col-md-4">
-<div class="post feature-post">
-<div class="entry-header">
-<div class="entry-thumbnail">
-<img class="img-fluid" src="\img\posts\plasma.jpg" alt="Image">
-</div>
-<div class="catagory technology"><span><a href="#">Technology</a></span></div>
-</div>
-<div class="post-content">
-<div class="entry-meta">
-<ul class="list-inline">
-<li class="publish-date"><i class="fa fa-clock-o"></i><a href="#"> Nov 2, 2018 </a></li>
-<li class="views"><i class="fa fa-eye"></i><a href="#">15k</a></li>
-<li class="loves"><i class="fa fa-heart-o"></i><a href="#">278</a></li>
-</ul>
-</div>
-<h2 class="entry-title">
-<a href="news-details.html">Japan in four gorgeous Pokémon-themed colors</a>
-</h2>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="post feature-post">
-<div class="entry-header">
-<div class="entry-thumbnail">
-<img class="img-fluid" src="img\posts\plasma.jpg" alt="Image">
-</div>
-<div class="catagory entertainment"><a href="#">Entertainment</a></div>
-</div>
-<div class="post-content">
-<div class="entry-meta">
-<ul class="list-inline">
-<li class="publish-date"><i class="fa fa-clock-o"></i><a href="#"> Nov 3, 2018 </a></li>
-<li class="views"><i class="fa fa-eye"></i><a href="#">15k</a></li>
-<li class="loves"><i class="fa fa-heart-o"></i><a href="#">278</a></li>
-</ul>
-</div>
-<h2 class="entry-title">
-<a href="news-details.html">We finally found out how BB-8 really works</a>
-</h2>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="post feature-post">
-<div class="entry-header">
-<div class="entry-thumbnail">
-<img class="img-fluid" src="img\posts\python-programming.jpg" alt="Image">
-</div>
-<div class="catagory politics"><span><a href="#">Politics</a></span></div>
-</div>
-<div class="post-content">
-<div class="entry-meta">
-<ul class="list-inline">
-<li class="publish-date"><i class="fa fa-clock-o"></i><a href="#"> Nov 5, 2018 </a></li>
-<li class="views"><i class="fa fa-eye"></i><a href="#">15k</a></li>
-<li class="loves"><i class="fa fa-heart-o"></i><a href="#">278</a></li>
-</ul>
-</div>
-<h2 class="entry-title">
-<a href="news-details.html">And the most streamed Beatles song on Spotify is..</a>
-</h2>
-</div>
-</div>
+{{ content }}
+
+        <!-- Home Post List -->
+        {% for post in site.posts limit : 5 %}
+
+        <article class="post-preview">
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+            <h2 class="post-title">{{ post.title }}</h2>
+            {% if post.subtitle %}
+            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+            {% else %}
+            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+            {% endif %}
+            <img class="img-fluid" src="{{ post.background }}">
+          </a>
+          <p class="post-meta">Posted by
+            {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}
+            on
+            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+          </p>
+        </article>
+
+        <hr>
+
+        {% endfor %}
 </div>
 
 </div>
