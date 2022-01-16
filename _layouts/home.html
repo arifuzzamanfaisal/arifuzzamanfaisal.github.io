@@ -162,28 +162,40 @@ layout: default
     </div>
 </div>
 <div class="row">
+{{ content }}
+
+        <!-- Home Post List -->
+        {% for post in site.posts limit : 6 %}
+		
 <div class="col-md-4">
 <div class="post feature-post">
 <div class="entry-header">
 <div class="entry-thumbnail">
-<img class="img-fluid" src="\img\posts\plasma.jpg" alt="Image">
+<img class="img-fluid" src="{{ post.pic }}" alt="Image">
 </div>
 <div class="catagory technology"><span><p>Technology</p></span></div>
 </div>
 <div class="post-content">
 <div class="entry-meta">
 <ul class="list-inline">
-<li class="publish-date"><i class="fa fa-clock-o"></i><a href="#"> Nov 2, 2018 </a></li>
-<li class="views"><i class="fa fa-eye"></i><a href="#">15k</a></li>
-<li class="loves"><i class="fa fa-heart-o"></i><a href="#">278</a></li>
+<li class="publish-date"><i class="fa fa-clock-o"></i><a> {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %} </a></li>
+<li class="views"><i class="fa fa-eye"></i><a href="#">{% include read_time.html content=post.content %}  </a></li>
+<li class="loves"><i class="fa fa-heart-o"></i><a href="#">{{ post.date | date: '%B %d, %Y' }}</a></li>
 </ul>
 </div>
 <h2 class="entry-title">
-<a href="news-details.html">Japan in four gorgeous Pokémon-themed colors</a>
+<a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
 </h2>
 </div>
 </div>
 </div>
+{% endfor %}
+
+
 <div class="col-md-4">
 <div class="post feature-post">
 <div class="entry-header">
