@@ -151,9 +151,14 @@ layout: default
 <li class="loves"><i class="fa fa-heart-o"></i><a> {{ post.date | date: '%B %d, %Y' }}</a></li>
 </ul>
 </div>
-<h2 class="entry-title">
-<a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
-</h2>
+
+<a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+<h2 class="entry-title">{{ post.title }}</h2>
+{% if post.subtitle %}
+<h3 class="post-subtitle">{{ post.subtitle }}</h3>
+<h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 12 }}</h3>
+{% endif %}
+</a>
 <hr>
 </div>
 </div>
