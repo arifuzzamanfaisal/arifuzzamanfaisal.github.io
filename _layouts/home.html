@@ -155,9 +155,10 @@ layout: default
 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
 <h2 class="entry-title">{{ post.title }}</h2>
 {% if post.subtitle %}
-<h3 class="post-subtitle">{{ post.subtitle }}</h3>
-<h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 12 }}</h3>
-{% endif %}
+            <p class="post-subtitle">{{ post.subtitle }}</p>
+            {% else %}
+            <p class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+            {% endif %}
 </a>
 </div>
 </div>
